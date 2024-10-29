@@ -21,11 +21,14 @@
   <body>
     <header id="home">
       <div class="logo">
-        <a href="../index.html"
-          ><img src="../img/logo.png" alt="Curtiembre Infante S.A."
-        /></a>
+        <a href="../index.html"><img src="../img/logo.png" alt="Curtiembre Infante S.A." /></a>
       </div>
-      <nav>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
         <a href="#"><img src="../img/EN.svg" alt="" /></a>
         <ul>
           <li><a href="../index.html#about">Quiénes Somos</a></li>
@@ -34,7 +37,7 @@
         </ul>
       </nav>
     </header>
-
+          
     <section class="banner">
       <div>
         <img
@@ -76,36 +79,38 @@
           volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
           ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
         </p>
-        <article class="product">
-          <img
-            src="../img/catalogo/crush-africano2.png"
-            alt="Producto Crush Africano"
-            onclick="showPopup(this.src)"
-          />
-          <div class="product-text">
-            <p class="roboto-black">AFRICANO</p>
-          </div>
-        </article>
-        <article class="product">
-          <img
-            src="../img/catalogo/crush-marron1.png"
-            alt="Producto Crush Marrón"
-            onclick="showPopup(this.src)"
-          />
-          <div class="product-text">
-            <p class="roboto-black">MARRÓN</p>
-          </div>
-        </article>
-        <article class="product">
-          <img
-            src="../img/catalogo/crush-negro1.png"
-            alt="Producto Crush Negro"
-            onclick="showPopup(this.src)"
-          />
-          <div class="product-text">
-            <p class="roboto-black">NEGRO</p>
-          </div>
-        </article>
+        <div class="variantes">
+          <article class="product">
+            <img
+              src="../img/catalogo/crush-africano2.png"
+              alt="Producto Crush Africano"
+              onclick="showPopup(this.src)"
+            />
+            <div class="product-text">
+              <p class="roboto-black">AFRICANO</p>
+            </div>
+          </article>
+          <article class="product">
+            <img
+              src="../img/catalogo/crush-marron1.png"
+              alt="Producto Crush Marrón"
+              onclick="showPopup(this.src)"
+            />
+            <div class="product-text">
+              <p class="roboto-black">MARRÓN</p>
+            </div>
+          </article>
+          <article class="product">
+            <img
+              src="../img/catalogo/crush-negro1.png"
+              alt="Producto Crush Negro"
+              onclick="showPopup(this.src)"
+            />
+            <div class="product-text">
+              <p class="roboto-black">NEGRO</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -129,10 +134,14 @@
           <p>WhatsApp: 1151852443</p>
           <p>Horario (8hs a 14hs)</p>
         </div>
-        <form action="#" method="POST">
-          <input type="text" name="nombre" placeholder="Nombre" />
-          <input type="email" name="email" placeholder="Email" />
-          <textarea name="mensaje" placeholder="Mensaje"></textarea>
+        <form
+          action="https://formsubmit.co/sebastian.mere@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+          <!-- input type="hidden" name="_captcha" value="false" /-->
           <button type="submit">Enviar</button>
         </form>
       </div>
@@ -240,5 +249,16 @@
         }
       };
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+    
+        menuToggle.addEventListener("click", function() {
+          menu.classList.toggle("show");
+          menuToggle.classList.toggle("active");
+        });
+      });
+    </script>   
   </body>
 </html>

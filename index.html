@@ -19,7 +19,12 @@
       <div class="logo">
         <a href="index.html"><img src="img/logo.png" alt="Curtiembre Infante S.A." /></a>
       </div>
-      <nav>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
         <a href="#"><img src="img/EN.svg" alt="" /></a>
         <ul>
           <li><a href="#about">Quiénes Somos</a></li>
@@ -28,7 +33,7 @@
         </ul>
       </nav>
     </header>
-
+    
     <section class="banner">
       <div>
         <img src="img/banner1.jpg" alt="Imagen principal" class="banner-image" />
@@ -226,5 +231,16 @@
         });
       });
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+    
+        menuToggle.addEventListener("click", function() {
+          menu.classList.toggle("show");
+          menuToggle.classList.toggle("active");
+        });
+      });
+    </script>    
   </body>
 </html>

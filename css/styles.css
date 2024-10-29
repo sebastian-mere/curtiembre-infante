@@ -137,7 +137,8 @@ nav ul li a:hover {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  line-height: normal;
 }
 
 .about {
@@ -183,6 +184,9 @@ h1 {
   text-transform: uppercase;
 }
 
+.catalog .overlay p{
+  font-size:clamp(1.5rem, 5vw, 3rem)
+}
 .catalog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -263,6 +267,7 @@ h1 {
 
 form {
   width: 60%;
+  margin-bottom: 2rem;
 }
 
 form input,
@@ -368,19 +373,27 @@ footer p {
 
 .product-grid {
   display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.variantes {
+  display: flex;
 flex-wrap: wrap;
-  margin-top: 2rem;
 }
 
 .product {
   padding: 1rem;
-  width: 25%;
+  width: 250px;
   position: relative;
   overflow: hidden;
 }
 
 .product-desc {
   padding-bottom: 2rem;
+  font-size: 1rem;
 }
 
 .product img {
@@ -409,13 +422,14 @@ flex-wrap: wrap;
   background-color: #a55e44;
   color: #fff;
   font-size: 1.25rem;
+  padding: 2rem 10%;
 }
 
 .cta-product a {
   color: #a55e44;
   background-color: #fff;
   padding: 0.5rem 3rem;
-  margin-left: 1rem;
+  margin-left: 2rem;
   text-decoration: none;
 }
 
@@ -453,4 +467,181 @@ flex-wrap: wrap;
 .close:focus {
   color: #bbb;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 5%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Banner */
+  .banner, .banner-image {
+    height: 250px;
+  }
+
+  /* About Section */
+  .about {
+    flex-direction: column;
+    padding: 2rem 5%;
+  }
+
+  .about .imgAbout, .about .desc {
+    width: 100%;
+    margin: 0;
+  }
+
+  .about .desc {
+    margin-top: 1rem;
+  }
+
+  /* Catalogo Grid */
+  .catalog {
+    padding: 2rem 5% 4rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* Contacto */
+  .columnas {
+    flex-direction: column;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  /* Mapa */
+  .map iframe {
+    height: 200px;
+  }
+
+  /* Footer */
+  footer nav ul {
+    display: block;
+    text-align: start;
+  }
+
+  footer .social {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social img {
+    margin: 0 10px;
+  }
+
+  .social a {
+    padding: 0
+}
+
+  .cta-product{
+    flex-wrap: wrap;
+    padding: 2rem 5%;
+    text-align: center;
+    height: auto;
+  }
+  
+  .cta-product a {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas (teléfonos muy compactos) */
+@media (max-width: 480px) {
+  /* Reducir tamaño del texto */
+  h1, h2, .cta, .contact-info h3 {
+    font-size: 1.5rem;
+  }
+
+  /* Ajustes en el botón flotante de WhatsApp */
+  .whatsapp-button {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  /* Footer text size */
+  footer p {
+    font-size: 0.6rem;
+  }
+}
+
+/* Estilos para el botón de menú hamburguesa */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+}
+
+.menu-toggle span {
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Ocultar el menú en pantallas pequeñas por defecto */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu ul li {
+    margin: 10px 0;
+  }
+
+  /* Mostrar el botón de hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Menú desplegado */
+  .menu.show {
+    display: flex;
+    position: relative
+  }
+
+  /* Animación del ícono de hamburguesa al abrir */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -9px);
+  }
 }
