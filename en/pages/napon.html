@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Napón - Curtiembre Infante S.A.</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+  </head>
+
+  <body>
+    <header id="home">
+      <div class="logo">
+        <a href="/en/index.html"
+          ><img src="/img/logo.png" alt="Curtiembre Infante S.A."
+        /></a>
+      </div>
+      <button class="menu-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="menu">
+        <a href="/es/pages/napon.html"><img src="/img/ES.svg" alt="" /></a>
+        <ul>
+          <li><a href="/en/index.html#about">Quiénes Somos</a></li>
+          <li><a href="/en/index.html#catalog">Catálogo</a></li>
+          <li><a href="/en/index.html#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <div>
+        <img
+          src="/img/napon-header.jpg"
+          alt="Imagen principal"
+          class="banner-image"
+        />
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <h2 class="roboto-bold-italic">NAPÓN</h2>
+      <div class="separador"></div>
+      <div class="product-grid">
+        <p class="product-desc">
+          REVISAR TEXTO Espesor de 06/08, es un cuero pigmentado y tiene amplia
+          diversidad de colores.
+        </p>
+        <div class="variantes">
+          <article class="product">
+            <img
+              src="/img/catalogo/napon-negro.jpg"
+              alt="Producto Napón Negro"
+              onclick="showPopup(this.src)"
+            />
+            <div class="product-text">
+              <p class="roboto-black">NEGRO</p>
+            </div>
+          </article>
+          <article class="product">
+            <img
+              src="/img/catalogo/napon-chocolate.jpg"
+              alt="Producto Napón Chocolate"
+              onclick="showPopup(this.src)"
+            />
+            <div class="product-text">
+              <p class="roboto-black">CHOCOLATE</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-product roboto-bold">
+      <p>¿Tenés alguna duda o consulta? Comunicate con nuestros asesores.</p>
+      <a href="https://wa.me/1151852443">Mensajeanos</a>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="roboto-bold-italic">Contacto</h2>
+      <div class="separador"></div>
+      <div class="columnas">
+        <div class="contact-info">
+          <h3>CURTIEMBRE INFANTE S.A.</h3>
+          <p>
+            Gral. Vedia 67, B1872 Avellaneda,<br />
+            Provincia de Buenos Aires,<br />
+            Argentina.
+          </p>
+          <p>Tel: 42031364 / 42044806</p>
+          <p>WhatsApp: 1151852443</p>
+          <p>Horario (8hs a 14hs)</p>
+        </div>
+        <form
+          action="https://formsubmit.co/sebastian.mere@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+          <!-- input type="hidden" name="_captcha" value="false" /-->
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13123.216920522718!2d-58.3432548!3d-34.6848901!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3331de0a82d77%3A0xc17f9a6e37affe78!2sCurtiembre%20Infante%20SA!5e0!3m2!1ses!2sar!4v1727136845193!5m2!1ses!2sar"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/en/index.html#home">Home</a>
+            </li>
+            <li>
+              <a href="/en/index.html#about">Quiénes somos</a>
+            </li>
+            <li>
+              <a href="/en/index.html#catalog">Catálogo</a>
+            </li>
+            <li>
+              <a href="/en/index.html#contact">Contacto</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="social">
+          <a
+            href="https://www.google.com/maps?ll=-34.68489,-58.343255&z=14&t=m&hl=es&gl=AR&mapclient=embed&cid=13943032769533705848"
+            target="_blank"
+            ><img src="/img/footer map.svg" alt="locación"
+          /></a>
+          <a href="mailto:info@curtiembreinfante.com" target="_blank"
+            ><img src="/img/footer mail.svg" alt="email"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img src="/img/footer ig.svg" alt="instagram"
+          /></a>
+          <a href="https://wa.me/1151852443" target="_blank"
+            ><img src="/img/footer wp.svg" alt="instagram"
+          /></a>
+        </div>
+      </div>
+      <p>© 2024 Curtiembre Infante.</p>
+    </footer>
+
+    <div id="imagePopup" class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <img class="popup-content" id="popupImage" />
+    </div>
+
+    <a href="https://wa.me/1151852443" class="whatsapp-button" target="_blank">
+      <img src="/img/whatsapp-icon.svg" alt="WhatsApp" />
+    </a>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".banner").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          arrows: false,
+          autoplaySpeed: 2000,
+        });
+      });
+    </script>
+    <script>
+      function showPopup(imgSrc) {
+        var popup = document.getElementById("imagePopup");
+        var popupImage = document.getElementById("popupImage");
+
+        popup.style.display = "block";
+        popupImage.src = imgSrc;
+      }
+
+      function closePopup() {
+        document.getElementById("imagePopup").style.display = "none";
+      }
+
+      // Cerrar popup si se hace clic fuera de la imagen
+      window.onclick = function (event) {
+        var popup = document.getElementById("imagePopup");
+        if (event.target == popup) {
+          popup.style.display = "none";
+        }
+      };
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        menuToggle.addEventListener("click", function () {
+          menu.classList.toggle("show");
+          menuToggle.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

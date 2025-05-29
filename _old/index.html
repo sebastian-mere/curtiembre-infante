@@ -1,0 +1,18 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    const lang = (navigator.language || navigator.userLanguage).toLowerCase();
+    if (lang.startsWith("es")) {
+      window.location.replace("/es/index.html");
+    } else {
+      window.location.replace("/en/index.html");
+    }
+  </script>
+</head>
+<body>
+  <p>Redirigiendo al idioma correcto...</p>
+</body>
+</html>

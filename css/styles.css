@@ -83,7 +83,7 @@ body {
 }
 
 header {
-  background-image: url("../img/texture_bg2.jpg");
+  background-image: url("/img/texture_bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -170,10 +170,8 @@ h1 {
 }
 
 .catalog {
-  background-image: url("../img/texture_bg2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(41, 37, 35, 1) 50%, rgba(0, 0, 0, 1) 100%);
   color: #fff;
   padding: 2rem 10% 4rem;
 }
@@ -325,10 +323,8 @@ form button {
 }
 
 footer {
-  background-image: url("../img/texture_bg2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(41, 37, 35, 1) 50%, rgba(0, 0, 0, 1) 100%);
   text-align: center;
   padding: 40px 10% 50px;
 }
