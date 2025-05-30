@@ -12,12 +12,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
   </head>
   <body>
     <header id="home">
       <div class="logo">
-        <a href="/es/index.html"><img src="/img/logo.png" alt="Curtiembre Infante S.A." /></a>
+        <a href="/es/index.html"
+          ><img src="/img/logo.png" alt="Curtiembre Infante S.A."
+        /></a>
       </div>
       <button class="menu-toggle" aria-label="Abrir menú">
         <span></span>
@@ -33,19 +39,35 @@
         </ul>
       </nav>
     </header>
-    
+
     <section class="banner">
       <div>
-        <img src="/img/banner1.jpg" alt="Imagen principal" class="banner-image" />
+        <img
+          src="/img/banner1.jpg"
+          alt="Imagen principal"
+          class="banner-image"
+        />
       </div>
       <div>
-        <img src="/img/banner2.jpg" alt="Imagen principal" class="banner-image" />
+        <img
+          src="/img/banner2.jpg"
+          alt="Imagen principal"
+          class="banner-image"
+        />
       </div>
       <div>
-        <img src="/img/banner3.jpg" alt="Imagen principal" class="banner-image" />
+        <img
+          src="/img/banner3.jpg"
+          alt="Imagen principal"
+          class="banner-image"
+        />
       </div>
       <div>
-        <img src="/img/banner4.jpg" alt="Imagen principal" class="banner-image" />
+        <img
+          src="/img/banner4.jpg"
+          alt="Imagen principal"
+          class="banner-image"
+        />
       </div>
     </section>
 
@@ -129,9 +151,16 @@
           </a>
         </article>
       </div>
-      <p class="cta roboto-black-italic">
-        <a href="https://wa.me/1151852443">Consultanos</a> por otros artículos
-      </p>
+      <div class="cta">
+        <p class="roboto-black-italic">
+          Todos nuestros cueros cuentan con certificaciones internacionales
+        </p>
+        <img src="/img/logo_lwg.png" alt="" />
+        <img src="/img/logo_iso.svg" alt="" />
+        <p class="roboto-black-italic">
+          <a href="https://wa.me/1151852443">Consultanos</a> por otros artículos
+        </p>
+      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -219,7 +248,10 @@
       type="text/javascript"
       src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <script type="text/javascript">
       $(document).ready(function () {
         $(".banner").slick({
@@ -232,15 +264,15 @@
       });
     </script>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.querySelector(".menu-toggle");
         const menu = document.querySelector(".menu");
-    
-        menuToggle.addEventListener("click", function() {
+
+        menuToggle.addEventListener("click", function () {
           menu.classList.toggle("show");
           menuToggle.classList.toggle("active");
         });
       });
-    </script>    
+    </script>
   </body>
 </html>
